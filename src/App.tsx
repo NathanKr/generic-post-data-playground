@@ -1,5 +1,4 @@
 import { Alert, CircularProgress } from "@mui/material";
-import { isEmpty } from "lodash";
 import { useState } from "react";
 import GenericPostData from "./components/generic-post-data";
 
@@ -20,28 +19,24 @@ function App() {
       >
         set body
       </button>
-      {!isEmpty(body) && (
-        <GenericPostData
-          url="https://jsonplaceholder.typicode.com/posts"
-          body={body}
-          successComponent={
-            <Alert severity="success">
-              This is an auccess alert — check it out!
-            </Alert>
-          }
-          loadingComponent={
-            <>
-              Loading ...
-              <CircularProgress />
-            </>
-          }
-          errorComponent={
-            <Alert severity="error">
-              This is an error alert — check it out!
-            </Alert>
-          }
-        />
-      )}
+      <GenericPostData
+        url="https://jsonplaceholder.typicode.com/posts"
+        body={body}
+        successComponent={
+          <Alert severity="success">
+            This is an auccess alert — check it out!
+          </Alert>
+        }
+        loadingComponent={
+          <>
+            Loading ...
+            <CircularProgress />
+          </>
+        }
+        errorComponent={
+          <Alert severity="error">This is an error alert — check it out!</Alert>
+        }
+      />
     </div>
   );
 }

@@ -1,8 +1,8 @@
 import { ReactElement } from "react";
 
-export default interface IPostData<Data> {
+export default interface IPostData<BodyType> {
     url: string;
-    body : Data;
+    body : BodyType;
     successComponent: ReactElement;
     errorComponent: ReactElement;
     loadingComponent: ReactElement;
