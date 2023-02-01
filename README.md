@@ -2,6 +2,12 @@
 <p>usePostData is a custom hook that can post data. It return [result, isLoading, error]</p>
 <p>given isLoading we might want to show progress .Given error we might want to show error .So why not do a component for this ? - thats the purpose of this repository</p>
 
+
+<h2>Declerative design</h2>
+What is nice about this design is that it embrace the declerative concept , which is one of react foundations
+
+![Declerative](./figs/declerative.png)
+
 <h2>Design</h2>
 The design is composed of three layers
 <ul>
@@ -9,6 +15,8 @@ The design is composed of three layers
 <li>usePostData<BodyType> - custom hooks to post data</li>
 <li> GenericPostData<BodyType>(props: IPostData<BodyType>) - generic component to show : error \ success \ loading . This component is posting data when its url and body properties are set by its parent</li>
 </ul>
+
+
 
 <h2>IPostData<BodyType></h2>
 
